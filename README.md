@@ -1,0 +1,2 @@
+# DjangoTodo
+Simple Django Todo
