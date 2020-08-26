@@ -1,4 +1,5 @@
 # DjangoTodo
+[![Build Status](https://travis-ci.org/taufanbudiman/DjangoTodo.svg?branch=master)](https://travis-ci.org/taufanbudiman/DjangoTodo)
 Simple Django Todo 
 
 ## Installing (Windows)
@@ -8,7 +9,9 @@ virtualenv env
 source env/Scripts/activate
 ```
 
-create project with django admin
+install requirements depedencies
 ```bash
-django-admin startproject todo
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
 ```
