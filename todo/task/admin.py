@@ -21,4 +21,14 @@ class TaskAdmin(admin.ModelAdmin):
         ) % updated, messages.SUCCESS)
     set_done.short_description = "Mark selected task as Done"
 
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        elif request.user.has_perm('task.view_task'):
+            return qs.filter(status=Task.TODO)
+        else:
+            return qs.none()
+
+
 admin.site.register(Task, TaskAdmin)
