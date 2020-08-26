@@ -1,6 +1,7 @@
 # DjangoTodo
 [![Build Status](https://travis-ci.org/taufanbudiman/DjangoTodo.svg?branch=master)](https://travis-ci.org/taufanbudiman/DjangoTodo)
-Simple Django Todo 
+
+Simple Django Todo
 
 ## Installing (Windows)
 create environmet django and activate
