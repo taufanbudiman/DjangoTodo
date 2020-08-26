@@ -13,5 +13,12 @@ class Task(models.Model):
     description = models.CharField(max_length=255)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=TODO)
 
+    def setDone(self):
+        if self.status != self.DONE:
+            self.status = self.DONE
+            self.save()
+            return self.DONE
+        return "have done"
+
     def __str__(self):
         return self.description
